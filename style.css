@@ -57,7 +57,7 @@ h2 {
 }
 .save-el{
     height: 30vh;
-    overflow: scroll;
+    overflow: hidden;
     text-align: left;
     font-weight: 600;
     padding: 3px 10px;
@@ -74,6 +74,15 @@ h2 {
     padding: 20px;
     margin-top: 10px;
     border-radius: 10px;
+    overflow: scroll;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+}
+.but::-webkit-scrollbar{
+    display: none;
+}
+.save-el:hover, .but{
+    overflow: auto;
 }
 .but:nth-child(even){
     background-color:rgb(74, 163, 163);
